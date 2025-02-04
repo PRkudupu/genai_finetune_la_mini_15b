@@ -1,0 +1,5 @@
+# Ignore the directory containing the fine-tuned model
+fine-tuned-la-mini-gpt-1.5b/
+
+# Ignore the results directory
+results/

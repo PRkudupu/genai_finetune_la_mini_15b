@@ -1,0 +1,90 @@
+Installing and running LaMa (Large Mask Inpainting) on your GPU-enabled laptop involves the following steps:
+________________________________________
+Step 1: Install Dependencies
+Before you begin, ensure that your system has the required dependencies.
+1.1 Install CUDA & cuDNN (For NVIDIA GPUs)
+•	Check your GPU: 
+•	nvidia-smi
+•	Install CUDA Toolkit & cuDNN if not already installed.
+ 
+1.2 Install Python & Git
+•	Ensure Python 3.8+ is installed: 
+•	python --version
+•	If missing, install it via: 
+•	sudo apt update && sudo apt install python3 python3-pip git -y
+________________________________________
+Step 2: Clone the LaMa Repository
+git clone https://github.com/saic-mdal/lama.git
+cd lama
+
+ 
+________________________________________
+Step 3: Set Up a Virtual Environment
+Create and activate a virtual environment to avoid conflicts:
+python3 -m venv venv
+source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+________________________________________
+Step 4: Install Required Python Packages
+pip install --upgrade pip
+pip install -r requirements.txt
+________________________________________
+Step 5: Install PyTorch with CUDA and dependencies
+To enable GPU acceleration, install PyTorch with CUDA:
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+(Ensure you choose the right CUDA version for your system from PyTorch's website.)
+
+Run this command in wsl
+sudo apt update && sudo apt upgrade -y
+sudo apt install build-essential python3-dev python3-pip python3-venv -y
+sudo apt install cython libopenblas-dev liblapack-dev gfortran -y
+sudo apt install python3-wheel python3-setuptools -y
+
+
+pip install --upgrade pip setuptools wheel
+pip install --upgrade cython
+ 
+
+sudo apt install python3-distutils python3-setuptools -y
+ 
+
+sudo apt install python3.10-venv python3.10-distutils -y
+ 
+pip install --upgrade pip setuptools wheel
+pip install --upgrade numpy
+ 
+
+pip install --no-cache-dir scikit-image
+ 
+	
+Step 5 : Install lama
+Register with meta
+https://www.llama.com/llama-downloads/
+
+
+Step 6 : Install lama cli
+pip install llama-stack
+pip install llama-stack -U
+ 
+
+Step 6 : Find Model list
+llama model list
+ 
+
+Select model
+llama model download --source meta --model-id meta-llama/Llama-3.3-70B-Instruct
+
+Note : we have to paste the custom url
+ 
+ 
+
+AFTER INSTALLATION
+ 
+
+INSTALL PYTORCH
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+USING LOWER MODEL FOR 
+
+
+
+
